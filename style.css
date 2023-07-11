@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap");
+
+* {
+    box-sizing: border-box;
+    line-height: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 1340px;
+    min-height: 100vh;
+    font-family: "League Spartan";
+    font-size: 1rem;
+    overflow-x: hidden;
+}
+
+/* ======================== Star Main Area ================ */
+
+#site{
+    position: relative;
+}
+
+.head{
+    display: grid;
+    grid-template-columns: 55% 35%;    
+}
+
+#two,
+#three {
+    display: none;
+}
+
+.logo{
+    height: fit-content;
+    width: fit-content;
+}
+
+.back{
+    height: 468px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.nav{
+    background-image: url(./images/desktop-image-hero-1.jpg);
+    
+}
+
+.nav1{
+    background-image: url(./images/desktop-image-hero-2.jpg);
+}
+
+.nav2{
+    background-image: url(./images/desktop-image-hero-3.jpg);
+}
+
+#bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 4rem;
+    margin-left: 2rem;
+}
+
+#ham{
+    display: none;
+}
+
+#bar-ul{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.bar-li{
+    list-style: none;
+}
+
+.li-a{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.li-a:hover{
+    border-bottom: solid white 2px;
+    padding-bottom: 0.5rem;
+}
+
+.icon{
+    display: grid;
+    grid-template-columns: 50% 50%;    
+    width: 150px;
+    right: 463px;
+    position: absolute;
+    top: 413px;
+}
+
+.icon-img{
+    background-color: black;
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+
+.icon-img:hover{
+    background-color: hsl(0, 0%, 27%);
+}
+
+/* head-info */
+
+.head-info{
+    padding: 5rem 0rem 0rem 3rem;
+}
+
+.head-h1{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 2.8rem;
+    color: black;
+}
+
+.head-p{
+    color: hsl(0, 0%, 63%);
+    font-size: 600;
+    margin-top: 2rem;
+    line-height: 1.5rem;
+}
+
+.head-span{
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: hsl(0, 0%, 27%);
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    display: inline-block;
+    font-size: 600;
+    cursor: pointer;
+}
+
+.head-span:hover{
+    color: hsl(0, 0%, 63%);
+}
+
+/* Info Section  */
+
+.info{
+    display: flex;
+    flex-direction: row;
+}
+
+.about{
+    padding: 3.5rem 1rem 0rem 2rem;
+}
+
+.abt-h2{
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+.abt-p{
+    margin-top: 1.5rem;
+    font-weight: 600;
+    color: hsl(0, 0%, 63%);
+    font-size: 0.9rem;
+    line-height: 1rem;
+}
+
+
+/* ======================== End Main Area ================ */
+
+/* ======================== START Footer Area ================ */
+
+.foot {
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 20px;
+    color: hsl(35, 77%, 62%);
+    justify-content: center;
+    background-color: hsl(240, 10%, 16%);
+    padding: 5px;
+}
+
+.foot a {
+    color: hsl(5, 85%, 63%);
+    text-decoration: none;
+}
+
+.foot a:hover {
+    color: white;
+}
+
+/* ======================== End Footer Area ================ */
+
+/* ======================== Start Media Querry Area ================ */
+
+@media screen and (max-width: 375px) {
+    body {
+        min-width: 375px;
+    }
+
+
+    /* NAVBAR AREA */
+
+    #bar {
+        padding: 2rem 1rem;
+        border-bottom: none;
+        margin-top: 0;
+        margin-left: 0;
+        
+    }
+
+    #ham {
+        display: grid;
+        padding: 1rem;
+        background: transparent;
+        border: 3px solid hsl(270, 9%, 17%);
+        border: none;
+    }
+
+    #ham img:last-child {
+        display: none;
+    }
+
+    body.open #ham img:first-child {
+        display: none;
+    }
+
+    body.open #ham img:last-child {
+        display: block;
+        z-index: 3;
+    }
+
+    .overlay {
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        visibility: hidden;
+        opacity: 0;
+        backdrop-filter: brightness(10%);
+        transition: 0.3s;
+    }
+
+    body.open .overlay {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    #bar-ul {
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        left: 0;
+        border: 0;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 20px;
+        padding: 3rem 0px 3rem 100px ;
+        background: hsl(207, 33%, 95%);
+        box-shadow: 0 0 20px rgb(0 0 0 / 70%);
+        translate: -100% 0;
+        transition: 0.3s;
+        gap: 1rem;
+    }
+
+    body.open #bar-ul {
+        translate: 0;
+    }
+
+    .li-a{
+        color: black;
+        font-weight: 700;
+    }
+
+    .li-a:hover{
+        border-bottom: 2px solid hsl(0, 0%, 27%);
+    }
+
+    .head{
+        grid-template-columns: 100%;
+    }
+
+    .back{
+        height: 360px;
+    }
+
+    .nav{
+        background-image: url(./images/mobile-image-hero-1.jpg);
+    }
+
+    .nav1{
+        background-image: url(./images/mobile-image-hero-2.jpg);
+    }
+
+    .nav2{
+        background-image: url(./images/mobile-image-hero-3.jpg);
+    }
+
+    .icon{
+        right: 0;
+        top: 304px;
+    }
+
+    .head-info{
+        padding: 4rem 1rem 4rem 2rem;
+    }
+
+    .head-h1{
+        font-size: 2rem;
+        line-height: 2.3rem;
+    }
+
+
+    /* Info Section  */
+
+    .info{
+        flex-direction: column;
+    }
+
+    .about{
+        padding: 4rem 1rem;
+    }
+
+    .abt-h2{
+        letter-spacing: 0.2rem;
+    }
+
+    .abt-p{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+
+/* ======================== End Media Querry Area ================ */
