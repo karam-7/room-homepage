@@ -55,7 +55,7 @@ body {
     background-image: url(./images/desktop-image-hero-3.jpg);
 }
 
-#bar{
+.bar{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -64,11 +64,11 @@ body {
     margin-left: 2rem;
 }
 
-#ham{
+.ham{
     display: none;
 }
 
-#bar-ul{
+.bar-ul{
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -207,7 +207,7 @@ body {
 
     /* NAVBAR AREA */
 
-    #bar {
+    .bar {
         padding: 2rem 1rem;
         border-bottom: none;
         margin-top: 0;
@@ -215,7 +215,7 @@ body {
         
     }
 
-    #ham {
+    .ham {
         display: grid;
         padding: 1rem;
         background: transparent;
@@ -223,15 +223,15 @@ body {
         border: none;
     }
 
-    #ham img:last-child {
+    .ham img:last-child {
         display: none;
     }
 
-    body.open #ham img:first-child {
+    body.open .ham img:first-child {
         display: none;
     }
 
-    body.open #ham img:last-child {
+    body.open .ham img:last-child {
         display: block;
         z-index: 3;
     }
@@ -254,7 +254,7 @@ body {
         opacity: 1;
     }
 
-    #bar-ul {
+    .bar-ul {
         position: fixed;
         z-index: 2;
         top: 0;
@@ -273,7 +273,7 @@ body {
         gap: 1rem;
     }
 
-    body.open #bar-ul {
+    body.open .bar-ul {
         translate: 0;
     }
 
